@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct circle{
+    float chu_vi;
+    float dien_tich;
+};
+
+
+
+struct circle hinh_tron(int r) {
+    struct circle A;
+
+    A.chu_vi = 2 * r * 3.14;
+    A.dien_tich = r * r * 3.14;
+
+    return A;
+}
+
+int main() {
+    int r;
+
+    printf("nhap r la:");
+    scanf("%d",&r);
+    
+    struct circle A = hinh_tron(r);
+
+    printf("%f\n",A.chu_vi);
+    printf("%f\n", A.dien_tich);
+
+    return 0;
+}
